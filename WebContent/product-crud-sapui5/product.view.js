@@ -101,7 +101,7 @@ sap.ui.jsview("product-crud-sapui5.product", {
 		oTable.bindRows("products>/Products");
 		
 		// 5 - return matrix layout and the form
-		var element = [oMatrix, oLayout];
+		var element = [oMatrix, oTable, oLayout];
 
 		return element;
 	},
