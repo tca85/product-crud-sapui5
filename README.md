@@ -1,4 +1,4 @@
-# customer-sapui5
+# product-crud-sapui5
 SAPUI5 webApp using oData with JSON
 
 Example from:
