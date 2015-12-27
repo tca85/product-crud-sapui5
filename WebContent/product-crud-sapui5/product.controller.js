@@ -1,5 +1,30 @@
 sap.ui.controller("product-crud-sapui5.product", {
 
+	//-----------------------------------------------------------------------------------------------------------------
+	/**
+	 * 
+	 */
+	onInit: function(){
+		var oModel = new sap.ui.model.odata.ODataModel("proxy/http/services.odata.org/V3/(S(k42qhed3hw4zgjxfnhivnmes))/oData/OData.svc");
+		
+		oModel.oHeader = {
+			"DataServiceVersion": "3.0",
+			"MaxDataServiceVersion" : "3.0"	
+		}
+		
+		sap.ui.getCore().setModel(oModel, "products");
+		
+		console.log(oModel);
+		console.log('teste');
+	},
+	
+	//-----------------------------------------------------------------------------------------------------------------
+	/**
+	 * 
+	 */
+	onAfterRendering: function(){
+		$("#formId").hide();
+	},
 
 	//-----------------------------------------------------------------------------------------------------------------
 	/**

@@ -74,7 +74,33 @@ sap.ui.jsview("product-crud-sapui5.product", {
 		    ]
 		});
 		
-		// 4 - return matrix layout and the form
+		// 4 - create a table
+		var oTable = new sap.ui.table.Table("tableId", {
+			visibleRowCount: 5,
+			editable: false,
+		});
+		
+		oTable.addColumn(new sap.ui.table.Column({
+			label: new sap.ui.commons.Label({text: "ID"}),
+			visible: true,
+			template: new sap.ui.commons.TextView({text: "products>ID"})
+		}))
+		
+		oTable.addColumn(new sap.ui.table.Column({
+			label: new sap.ui.commons.Label({text: "Name"}),
+			visible: true,
+			template: new sap.ui.commons.TextView({text: "products>Name"})
+		}))		
+		
+		oTable.addColumn(new sap.ui.table.Column({
+			label: new sap.ui.commons.Label({text: "Description"}),
+			visible: true,
+			template: new sap.ui.commons.TextView({text: "products>Description"})
+		}));
+		
+		oTable.bindRows("products>/Products");
+		
+		// 5 - return matrix layout and the form
 		var element = [oMatrix, oLayout];
 
 		return element;
