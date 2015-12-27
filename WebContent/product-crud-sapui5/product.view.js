@@ -1,4 +1,12 @@
 sap.ui.jsview("product-crud-sapui5.product", {
+	
+	//-----------------------------------------------------------------------------------------------------------------
+	/**
+	 * Specifies the Controller belonging to this View
+	 */
+	getControllerName : function(){
+		return "product-crud-sapui5.product";
+	},
 
 	//-----------------------------------------------------------------------------------------------------------------
 	/**

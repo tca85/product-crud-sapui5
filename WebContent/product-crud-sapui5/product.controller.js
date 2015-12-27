@@ -4,8 +4,8 @@ sap.ui.controller("product-crud-sapui5.product", {
 	/**
 	 * 
 	 */
-	onInit: function(){
-		var oModel = new sap.ui.model.odata.ODataModel("proxy/http/services.odata.org/V3/(S(k42qhed3hw4zgjxfnhivnmes))/oData/OData.svc");
+	onInit : function(){
+		var oModel = new sap.ui.model.odata.ODataModel("proxy/http/services.odata.org/V3/(S(k42qhed3hw4zgjxfnhivnmes))/OData/OData.svc");
 		
 		oModel.oHeader = {
 			"DataServiceVersion": "3.0",
@@ -22,7 +22,7 @@ sap.ui.controller("product-crud-sapui5.product", {
 	/**
 	 * 
 	 */
-	onAfterRendering: function(){
+	onAfterRendering : function(){
 		$("#formId").hide();
 	},
 
